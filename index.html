@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+
+            /*
+          1. Use a more-intuitive box-sizing model.
+        */
+        *, *::before, *::after {
+          box-sizing: border-box;
+        }
+
+        /*
+          2. Remove default margin
+        */
+        * {
+          margin: 0;
+        }
+
+        /*
+          Typographic tweaks!
+          3. Add accessible line-height
+          4. Improve text rendering
+        */
+        body {
+          line-height: 1.5;
+          -webkit-font-smoothing: antialiased;
+        }
+
+        /*
+          5. Improve media defaults
+        */
+        img, picture, video, canvas, svg {
+          display: block;
+          max-width: 100%;
+        }
+
+        /*
+          6. Remove built-in form typography styles
+        */
+        input, button, textarea, select {
+          font: inherit;
+        }
+
+        /*
+          7. Avoid text overflows
+        */
+        p, h1, h2, h3, h4, h5, h6 {
+          overflow-wrap: break-word;
+        }
+
+        /*
+          8. Create a root stacking context
+        */
+        #root, #__next {
+          isolation: isolate;
+        }
+
+    main {
+      background-color: hsl(30, 38%, 92%);
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      border-radius: 5px;
+      margin: 20px 10px;
+
+    }  
+
+    .image {
+      width: 100%;
+      
+    }
+
+    .image img{
+      border-radius: 5px;
+      width: 100%;
+    }
+
+    .text {
+      
+      margin-left: 0%;
+    }
+
+    .text h1 {
+      text-transform: uppercase;
+      color: hsl(228, 12%, 48%);
+      font-family: "Montserrat", sans-serif;
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 5px;
+      margin-top: 5%;
+      margin-bottom: 5%;
+      margin-left: 5%;
+    }
+
+    .text h2 {
+      color: hsl(212, 21%, 14%);
+      font-family: "Fraunces", serif;
+      font-size: 2rem;
+      line-height: 1;
+      font-weight: 900;
+      margin-left: 5%;
+    }
+
+    .text p {
+      color: hsl(228, 12%, 48%);
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin: 5%;
+    }
+
+    .text h3 {
+      color: hsl(158, 36%, 37%);
+      font-family: "Fraunces", serif;
+      font-size: 2rem;
+      margin-right: 5%;
+      margin-bottom: 5%;
+      margin-left: 5%;
+      vertical-align: middle;
+    }
+
+    .text .oldPrice {
+      text-decoration: line-through;
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+    
+      vertical-align: middle;
+    }
+
+    .text button {
+      background-color: hsl(158, 36%, 37%);
+      border: 0px;
+      border-radius: 8px;
+      color: white;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      width: 90%;
+      margin-top: 5%;
+      margin-bottom: 5%;
+      padding: 3%;
+      vertical-align: middle;
+          }  
+
+    .text button span {
+      vertical-align: middle;
+    }      
+
+    .text button:hover {
+      background-color: hsl(158, 58%, 16%);
+      cursor: pointer;
+
+    }
+
+    .buttonContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      margin: 0%;
+    }
+
+    @media (min-width:600px) {
+
+        .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        max-width: 60%;
+        max-height: 80%;
+        
+       
+       }
+
+       .image {
+      height: 100%;
+      width: 50%;
+      flex-grow: 0;
+      flex-shrink: 0;
+      
+    }
+
+    .image img{
+      border-radius: 5px;
+      height: 100%;
+      width: 100%;
+      flex-grow: 0;
+      flex-shrink: 0;
+      object-fit: cover;
+    }
+
+  }
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+  </style>
+</head>
+<body>
+
+  <main>
+
+    <div class="container">
+
+      <div class="image">
+
+        <img src="./images/image-product-mobile.jpg" alt="Pefume bottle">
+
+      </div>
+
+      <div class="text">
+        <h1>Perfume</h1>
+
+        <h2>Gabrielle Essence <br/> Eau De Parfum</h2>
+
+        <p>A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+        Perfumer-Creator for the House of CHANEL.</p>
+
+        <h3 style="display: inline;">$149.99</h3>
+
+        <p style="display: inline;" class="oldPrice">$169.99</p>
+
+        <div class="buttonContainer">
+
+          <button style="display: block;"><span class="material-symbols-outlined">
+            shopping_cart
+            </span> Add to Cart</button>
+
+        </div>
+
+        
+      </div>
+
+  </div>
+</main>
+<footer>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Pete McCartney</a>.
+  </div>
+</footer> 
+</body>
+</html>
